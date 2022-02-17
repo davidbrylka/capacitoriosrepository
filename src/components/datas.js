@@ -1,4 +1,4 @@
- import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, accessibilityOutline } from 'ionicons/icons';
+ import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp, accessibilityOutline, documentTextOutline, documentTextSharp, peopleOutline, peopleSharp, receiptOutline, receiptSharp, documentLockOutline, documentLockSharp, exitOutline, exitSharp } from 'ionicons/icons';
 import { Accueil } from './Accueil';
 import { MonCV } from './MonCV';
 import React from 'react';
@@ -13,49 +13,49 @@ import { LogOut } from './LogOut';
       title: 'Accueil',
       url: '/accueil',
       component : <Accueil></Accueil>,
-      iosIcon: mailOutline,
-      mdIcon: mailSharp
+      iosIcon: accessibilityOutline,
+      mdIcon: accessibilityOutline
     },
     {
       title: 'Mon CV',
       url: '/cv',
       component : <MonCV></MonCV>,
-      iosIcon: paperPlaneOutline,
-      mdIcon: paperPlaneSharp
+      iosIcon: documentTextOutline,
+      mdIcon: documentTextSharp
     },
     {
       title: 'Mes groupes',
       url: '/groupes',
       component : <MesGroupes></MesGroupes>,
-      iosIcon: heartOutline,
-      mdIcon: heartSharp
+      iosIcon: peopleOutline,
+      mdIcon: peopleSharp
     },
     {
       title: 'Mon portfolio',
       url: '/portfolio',
       component : <MonPortfolio></MonPortfolio>,
-      iosIcon: archiveOutline,
-      mdIcon: archiveSharp
+      iosIcon: receiptOutline,
+      mdIcon: receiptSharp
     },
     {
       title: 'Mes candidatures',
       url: '/candidatures',
       component : <MesCandidatures></MesCandidatures>,
-      iosIcon: trashOutline,
-      mdIcon: trashSharp
+      iosIcon: paperPlaneOutline,
+      mdIcon: paperPlaneSharp
     },
     {
       title: 'Mes CV Request',                  // Todo voir pour une traduction correcte
       url: '/cv-request',
       component : <MesCVRequest></MesCVRequest>,
-      iosIcon: warningOutline,
-      mdIcon: warningSharp
+      iosIcon: documentLockOutline,
+      mdIcon: documentLockSharp
     },
     {
       title: 'Deconnexion',
       url: '/logout',
       component : <LogOut></LogOut>,
-      iosIcon: accessibilityOutline,
-      mdIcon: accessibilityOutline
+      iosIcon: exitOutline,
+      mdIcon: exitSharp
     }
   ];

@@ -77,7 +77,7 @@ http://ionicframework.com/docs/theming/ */
 
    
   /** Meriam **/
-  --ion-color-meriam: #327e9c;
+  --ion-color-meriam: rgb(255, 255, 255);
   --ion-color-meriam-rgb: 0, 0, 248;
   --ion-color-meriam-contrast: #0000ff;
   --ion-color-meriam-contrast-rgb: 0, 0, 0;
