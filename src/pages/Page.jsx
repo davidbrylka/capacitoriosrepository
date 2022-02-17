@@ -3,34 +3,36 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 // import { useParams } from 'react-router';
 // import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
+import { appPages } from '../components/datas';
 import { useParams } from 'react-router';
+import { Header } from './header';
+import { Accueil } from '../components/Accueil';
+import { MonCV } from '../components/MonCV';
 
 const Page = () => {
 
-  const {name}=useParams()
+  const { name } = useParams()
 
-  console.log("Name :",name);
+  const objetPage = appPages.find(page => page.url.substring(1) === name)
+
+  console.log(objetPage.url);
+  console.log("************************");
+
+  const content = () => {
+    return objetPage.component
+  }
+
+  // console.log("Name :",name);
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>{name}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title={objetPage.title} />
 
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonText> Hello the world !! Everybody dance now \o/ !!
+      <IonContent>
+        {content()}
+        {/* <IonText> Hello Eric Everybody dance now \o/ !!
           Ceci est la page {name}
-      </IonText>
+      </IonText> */}
       </IonContent>
     </IonPage>
   );

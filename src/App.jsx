@@ -1,8 +1,11 @@
-import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRedirect, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Page from './pages/Page';
+import React from 'react';
+import { NotFound } from './NotFound.jsx';
+import { Accueil } from './components/Accueil';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -22,7 +25,6 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Hello from './pages/Hello';
 
 setupIonicReact();
 
@@ -30,16 +32,33 @@ const App = () => {
   return (
     <IonApp>
       <IonReactRouter>
+
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/page/Spam" />
-            </Route>
-            <Route path="/page/:name" exact={true}>
+
+            {/* <Route exact path="*" component={NotFound}/> */}
+
+            <Route exact path="/">
+              <Redirect to="/accueil" />
+              </Route> 
+ 
+            <Route exact path="/cv">
+              <Redirect to="/cv" />
+              </Route> 
+
+            <Route path="/:name" >
               <Page />
             </Route>
-            <Route path="/Hello" component={Hello}/>
+
+            {/* <Route exact path="/accueil" component={Accueil} /> */}
+
+            {/* <Route>
+            </Route> */}
+
+            {/* <Redirect exact from="/" to="/accueil"/> */}
+            {/* <Redirect  from="*" to="/accueil"  /> */}
+
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

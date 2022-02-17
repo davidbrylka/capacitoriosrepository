@@ -74,6 +74,24 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+   
+  /** Meriam **/
+  --ion-color-meriam: #327e9c;
+  --ion-color-meriam-rgb: 0, 0, 248;
+  --ion-color-meriam-contrast: #0000ff;
+  --ion-color-meriam-contrast-rgb: 0, 0, 0;
+  --ion-color-meriam-shade: #0000ff;
+  --ion-color-meriam-tint: #0000ff;
+}
+
+.ion-color-meriam {
+  --ion-color-base: var(--ion-color-meriam);
+  --ion-color-base-rgb: var(--ion-color-meriam-rgb);
+  --ion-color-contrast: var(--ion-color-meriam-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-meriam-contrast-rgb);
+  --ion-color-shade: var(--ion-color-meriam-shade);
+  --ion-color-tint: var(--ion-color-meriam-tint);
 }
 
 @media (prefers-color-scheme: dark) {
